@@ -18,3 +18,12 @@ const pokoje = [
     {id: 3, nazwa: "Serwerownia"},
     {id: 4, nazwa: "Wyjscie"}
 ];
+
+function przejscie(stanPrzed, komenda) {
+    if (komenda == "prawo" && stanPrzed.pokoj > 1)
+        return {...stanPrzed, energia: energia - 1, pokoj: pokoj + 1};
+    else if (komenda == "lewo" && stanPrzed.pokoj < 4)
+        return {...stanPrzed, energia: energia - 1, pokoj: pokoj + 1};
+
+    return stanPrzed;
+}
