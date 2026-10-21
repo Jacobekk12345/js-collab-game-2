@@ -1,1 +1,1 @@
-console.log(stanPoczatkowy);
+console.log(stanPoczatkowy());
