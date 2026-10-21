@@ -25,5 +25,8 @@ function przejscie(stanPrzed, komenda) {
     else if (komenda == "lewo" && stanPrzed.pokoj < 4)
         return {...stanPrzed, energia: energia - 1, pokoj: pokoj + 1};
 
-    return stanPrzed;
+    if (komenda == "prawo" || komenda == "lewo")
+        return {...stanPrzed, komunikat: "nie mozesz wejsc w sciane"};
+
+    return {...stanPrzed, komunikat: "nieznany kierunek"};
 }
